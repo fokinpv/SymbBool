@@ -19,12 +19,20 @@ class MonomBits(Monom):
 
     @classmethod
     def zero(cls):
-        return cls(bits=tuple())
+        zero = cls()
+        zero._bits = tuple()
+        return zero
 
     @classmethod
     def one(cls):
-        return cls(bits=(0,))
+        one = cls()
+        one._bits = (0,)
+        return one
 
     @property
     def degree(self):
         return sum(self._bits)
+
+    @property
+    def vector(self):
+        return self._bits

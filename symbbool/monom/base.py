@@ -50,3 +50,7 @@ class Monom:
     @property
     def degree(self):
         raise NotImplementedError
+
+    @property
+    def vector(self):
+        raise NotImplementedError
