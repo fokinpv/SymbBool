@@ -11,6 +11,9 @@ class MonomBits(Monom):
                 bits[var] = 1
             self._bits = tuple(bits)
 
+    def __eq__(self, other):
+        return self._bits == other._bits
+
     def is_zero(self):
         return self._bits == ()
 

@@ -19,9 +19,10 @@ class Monom:
         raise NotImplementedError
 
     def __eq__(self, other):
-        return NotImplemented
+        raise NotImplementedError
 
     def __lt__(self, other):
+        print('#')
         return self.order.lt(self, other)
 
     def __le__(self, other):
@@ -31,6 +32,9 @@ class Monom:
         return not self.order.lt(self, other)
 
     def __ge__(self, other):
+        return NotImplemented
+
+    def __mul__(self, other):
         return NotImplemented
 
     def is_zero(self):
